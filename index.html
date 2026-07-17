@@ -15,7 +15,7 @@
 
         <title>Guilherme Braga | Portefólio de Engenharia</title>
 
-        <link rel="stylesheet" href="css/style.css?v=3">
+        <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 
 <body>
@@ -27,19 +27,33 @@
 
                         <ul class="nav-links">
                                 <li>
-                                        <a href="#inicio">Início</a>
+                                        <a href="#inicio">
+                                                Início
+                                        </a>
                                 </li>
 
                                 <li>
-                                        <a href="#projetos">Projetos</a>
+                                        <a href="#sobre">
+                                                Sobre
+                                        </a>
                                 </li>
 
                                 <li>
-                                        <a href="#sobre">Sobre</a>
+                                        <a href="#projetos">
+                                                Projetos
+                                        </a>
                                 </li>
 
                                 <li>
-                                        <a href="#contactos">Contactos</a>
+                                        <a href="projetos-42.html">
+                                                42
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="#contactos">
+                                                Contactos
+                                        </a>
                                 </li>
                         </ul>
                 </nav>
@@ -63,21 +77,108 @@
                                                 comunicações e software.
                                         </p>
 
-                                        <a href="#projetos" class="button">
-                                                Ver projetos
-                                        </a>
+                                        <div class="hero-actions">
+                                                <a href="#projetos" class="button">
+                                                        Ver projetos
+                                                </a>
+
+                                                <a
+                                                        href="#sobre"
+                                                        class="button button-secondary"
+                                                >
+                                                        Sobre mim
+                                                </a>
+                                        </div>
                                 </div>
 
-                                <div class="hero-photo">
-                                        <img
-                                                src="assets/images/foto_perfil.jpeg"
-                                                alt="Fotografia de Guilherme Braga"
-                                        >
+                                <div
+                                        class="hero-decoration"
+                                        aria-hidden="true"
+                                >
+                                        <span class="hero-decoration-code">
+                                                &lt;/&gt;
+                                        </span>
+
+                                        <span class="hero-decoration-line"></span>
+                                        <span class="hero-decoration-line"></span>
+                                        <span class="hero-decoration-line"></span>
                                 </div>
                         </div>
                 </section>
 
-                <section id="projetos" class="section">
+                <section id="sobre" class="section about-section">
+                        <div class="section-header">
+                                <p class="section-label">
+                                        Perfil
+                                </p>
+
+                                <h2>
+                                        Sobre mim
+                                </h2>
+                        </div>
+
+                        <div class="about-story">
+                                <div class="about-photo-wrapper">
+                                        <div class="about-photo">
+                                                <img
+                                                        src="assets/images/foto_perfil.jpeg"
+                                                        alt="Fotografia de Guilherme Braga"
+                                                >
+                                        </div>
+
+                                        <span class="about-photo-name">
+                                                Guilherme Braga
+                                        </span>
+                                </div>
+
+                                <blockquote class="speech-bubble">
+                                        <span
+                                                class="speech-quote speech-quote-opening"
+                                                aria-hidden="true"
+                                        >
+                                                “
+                                        </span>
+
+                                        <div class="speech-content">
+                                                <p>
+                                                        Sou licenciado em Engenharia Eletrotécnica
+                                                        e de Computadores e tenho particular
+                                                        interesse por automação industrial,
+                                                        eletrónica, desenvolvimento de hardware,
+                                                        sistemas embebidos e software.
+                                                </p>
+
+                                                <p>
+                                                        Durante a licenciatura desenvolvi projetos
+                                                        que me permitiram trabalhar com programação,
+                                                        desenho de placas eletrónicas,
+                                                        microcontroladores, comunicações e análise
+                                                        de sistemas.
+                                                </p>
+
+                                                <p>
+                                                        Neste portefólio apresento não só os
+                                                        resultados, mas também os problemas
+                                                        encontrados, as decisões técnicas tomadas
+                                                        e o processo utilizado para chegar a cada
+                                                        solução.
+                                                </p>
+                                        </div>
+
+                                        <span
+                                                class="speech-quote speech-quote-closing"
+                                                aria-hidden="true"
+                                        >
+                                                ”
+                                        </span>
+                                </blockquote>
+                        </div>
+                </section>
+
+                <section
+                        id="projetos"
+                        class="section section-secondary"
+                >
                         <div class="section-header">
                                 <p class="section-label">
                                         Portefólio
@@ -86,29 +187,50 @@
                                 <h2>
                                         Projetos em destaque
                                 </h2>
+
+                                <p class="section-description">
+                                        Projetos de hardware, sistemas embebidos,
+                                        engenharia e desenvolvimento de software.
+                                </p>
                         </div>
 
                         <div class="projects-grid">
-                                <article class="project-card">
+                                <article class="project-card project-card-featured">
                                         <div class="project-content">
                                                 <p class="project-category">
-                                                        Sistemas embebidos
+                                                        Hardware e sistemas embebidos
                                                 </p>
 
                                                 <h3>
-                                                        Gateway NMEA 2000
+                                                        Módulo de aquisição NMEA 2000
                                                 </h3>
 
                                                 <p>
-                                                        Desenvolvimento de uma placa eletrónica
-                                                        baseada num ESP32 para aquisição de sinais,
-                                                        comunicação CAN, Wi-Fi e publicação de
-                                                        dados por MQTT.
+                                                        Desenvolvimento de uma PCB para aquisição
+                                                        de sinais analógicos e digitais em ambiente
+                                                        naval, com processamento local, comunicação
+                                                        CAN isolada e publicação remota de dados
+                                                        através de MQTT.
                                                 </p>
 
-                                                <span class="project-status">
-                                                        Conteúdo em preparação
-                                                </span>
+                                                <div class="project-tags">
+                                                        <span>ESP32</span>
+                                                        <span>PCB</span>
+                                                        <span>CAN</span>
+                                                        <span>MQTT</span>
+                                                        <span>ADS1115</span>
+                                                </div>
+
+                                                <a
+                                                        href="projeto-nmea2000.html"
+                                                        class="project-link"
+                                                >
+                                                        Explorar projeto
+
+                                                        <span aria-hidden="true">
+                                                                →
+                                                        </span>
+                                                </a>
                                         </div>
                                 </article>
 
@@ -126,8 +248,15 @@
                                                         Sistema de apoio à seleção preliminar de
                                                         soluções AVAC residenciais, baseado na
                                                         análise de projetos reais e em critérios
-                                                        técnicos e económicos.
+                                                        técnicos, económicos e de conforto.
                                                 </p>
+
+                                                <div class="project-tags">
+                                                        <span>AVAC</span>
+                                                        <span>Excel</span>
+                                                        <span>Dados</span>
+                                                        <span>Web</span>
+                                                </div>
 
                                                 <span class="project-status">
                                                         Conteúdo em preparação
@@ -135,54 +264,42 @@
                                         </div>
                                 </article>
 
-                                <article class="project-card">
+                                <article class="project-card project-card-featured">
                                         <div class="project-content">
                                                 <p class="project-category">
-                                                        Eletrónica e programação
+                                                        Programação e sistemas
                                                 </p>
 
                                                 <h3>
-                                                        Outros projetos
+                                                        Projetos 42
                                                 </h3>
 
                                                 <p>
-                                                        Projetos realizados durante a licenciatura,
-                                                        incluindo programação, automação, redes,
-                                                        eletrónica e sistemas operativos.
+                                                        Projetos desenvolvidos no percurso da 42,
+                                                        com foco em programação em C, gestão de
+                                                        memória, Linux, UNIX e comunicação entre
+                                                        processos.
                                                 </p>
 
-                                                <span class="project-status">
-                                                        Conteúdo em preparação
-                                                </span>
+                                                <div class="project-tags">
+                                                        <span>C</span>
+                                                        <span>Linux</span>
+                                                        <span>UNIX</span>
+                                                        <span>IPC</span>
+                                                </div>
+
+                                                <a
+                                                        href="projetos-42.html"
+                                                        class="project-link"
+                                                >
+                                                        Explorar projetos
+
+                                                        <span aria-hidden="true">
+                                                                →
+                                                        </span>
+                                                </a>
                                         </div>
                                 </article>
-                        </div>
-                </section>
-
-                <section id="sobre" class="section section-secondary">
-                        <div class="section-header">
-                                <p class="section-label">
-                                        Perfil
-                                </p>
-
-                                <h2>
-                                        Sobre mim
-                                </h2>
-                        </div>
-
-                        <div class="about-content">
-                                <p>
-                                        Sou licenciado em Engenharia Eletrotécnica e de
-                                        Computadores, com interesse em automação industrial,
-                                        eletrónica, desenvolvimento de hardware, sistemas
-                                        embebidos e software.
-                                </p>
-
-                                <p>
-                                        Este site apresenta o processo de desenvolvimento dos
-                                        meus projetos, as decisões técnicas tomadas, os testes
-                                        realizados e os resultados obtidos.
-                                </p>
                         </div>
                 </section>
 
@@ -195,6 +312,10 @@
                                 <h2>
                                         Contactos
                                 </h2>
+
+                                <p class="section-description">
+                                        Ligações para o meu trabalho e perfil profissional.
+                                </p>
                         </div>
 
                         <div class="contact-links">

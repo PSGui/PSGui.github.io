@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+        <meta charset="UTF-8">
+
+        <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+        >
+
+        <meta
+                name="description"
+                content="Desenvolvimento de um módulo de aquisição de dados para integração em sistemas NMEA 2000."
+        >
+
+        <title>Projeto NMEA 2000 | Guilherme Braga</title>
+
+        <link rel="stylesheet" href="css/style.css?v=8">
+        <link rel="stylesheet" href="css/nmea.css?v=2">
+</head>
+
+<body>
+        <header class="header">
+                <nav class="navbar">
+                        <a href="index.html" class="logo">
+                                Guilherme Braga
+                        </a>
+
+                        <ul class="nav-links">
+                                <li>
+                                        <a href="index.html#inicio">
+                                                Início
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="index.html#sobre">
+                                                Sobre
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a
+                                                href="index.html#projetos"
+                                                class="active"
+                                        >
+                                                Projetos
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="projetos-42.html">
+                                                42
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="index.html#contactos">
+                                                Contactos
+                                        </a>
+                                </li>
+                        </ul>
+                </nav>
+        </header>
+
+        <main>
+                <section class="nmea-hero">
+                        <div class="nmea-hero-inner">
+                                <div class="nmea-hero-content">
+                                        <a
+                                                href="index.html#projetos"
+                                                class="back-link"
+                                        >
+                                                <span aria-hidden="true">
+                                                        ←
+                                                </span>
+
+                                                Voltar ao portefólio
+                                        </a>
+
+                                        <p class="hero-label">
+                                                Projeto de estágio · OSTIUM
+                                        </p>
+
+                                        <h1>
+                                                Módulo de aquisição de dados para
+                                                integração em sistemas
+
+                                                <span>
+                                                        NMEA 2000
+                                                </span>
+                                        </h1>
+
+                                        <p class="nmea-hero-description">
+                                                Desenvolvimento de uma placa eletrónica capaz
+                                                de adquirir sinais analógicos e digitais,
+                                                processar os valores localmente e disponibilizar
+                                                os dados através de CAN e MQTT.
+                                        </p>
+
+                                        <div class="nmea-tags">
+                                                <span>KiCad</span>
+                                                <span>ESP32</span>
+                                                <span>C/C++</span>
+                                                <span>ADS1115</span>
+                                                <span>CAN</span>
+                                                <span>MQTT</span>
+                                                <span>PlatformIO</span>
+                                        </div>
+                                </div>
+
+                                <div class="nmea-board-showcase">
+                                        <div class="nmea-board-frame">
+                                                <div class="nmea-board-frame-header">
+                                                        <div class="nmea-board-frame-title">
+                                                                <span class="nmea-frame-dot"></span>
+                                                                Protótipo físico
+                                                        </div>
+
+                                                        <span class="nmea-board-frame-meta">
+                                                                OSTIUM
+                                                        </span>
+                                                </div>
+
+                                                <figure
+                                                        class="nmea-board-image"
+                                                        data-fallback="PCB NMEA 2000"
+                                                >
+                                                        <img
+                                                                src="assets/images/PCB_vista_geral.jpeg"
+                                                                alt="PCB desenvolvida para o módulo de aquisição NMEA 2000"
+                                                                onerror="this.remove();"
+                                                        >
+                                                </figure>
+                                        </div>
+
+                                        <div class="nmea-board-label">
+                                                <span></span>
+                                                PCB desenvolvida e testada
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+                <section class="nmea-stats-section">
+                        <div class="nmea-stats">
+                                <article>
+                                        <strong>
+                                                16
+                                        </strong>
+
+                                        <span>
+                                                Entradas analógicas
+                                        </span>
+
+                                        <small>
+                                                0–10 V e 4–20 mA
+                                        </small>
+                                </article>
+
+                                <article>
+                                        <strong>
+                                                8
+                                        </strong>
+
+                                        <span>
+                                                Entradas digitais
+                                        </span>
+
+                                        <small>
+                                                Isoladas por optoacoplador
+                                        </small>
+                                </article>
+
+                                <article>
+                                        <strong>
+                                                4
+                                        </strong>
+
+                                        <span>
+                                                Conversores ADS1115
+                                        </span>
+
+                                        <small>
+                                                ADC de 16 bits por I²C
+                                        </small>
+                                </article>
+
+                                <article>
+                                        <strong>
+                                                250
+                                        </strong>
+
+                                        <span>
+                                                kbit/s
+                                        </span>
+
+                                        <small>
+                                                Comunicação CAN
+                                        </small>
+                                </article>
+                        </div>
+                </section>
+
+                <section class="section nmea-problem-section">
+                        <div class="section-header">
+                                <p class="section-label">
+                                        Enquadramento
+                                </p>
+
+                                <h2>
+                                        O problema
+                                </h2>
+
+                                <p class="section-description">
+                                        Modernizar a instrumentação de uma embarcação não
+                                        implica necessariamente substituir todos os sensores
+                                        existentes.
+                                </p>
+                        </div>
+
+                        <div class="nmea-problem-grid">
+                                <article class="nmea-problem-main">
+                                        <span class="nmea-card-index">
+                                                01
+                                        </span>
+
+                                        <h3>
+                                                Integrar sensores convencionais numa rede digital
+                                        </h3>
+
+                                        <p>
+                                                Muitas embarcações continuam equipadas com sensores
+                                                analógicos utilizados para medir nível, pressão,
+                                                temperatura e outras grandezas.
+                                        </p>
+
+                                        <p>
+                                                O objetivo foi desenvolver uma interface capaz de
+                                                adquirir esses sinais, condicioná-los e prepará-los
+                                                para integração num sistema baseado em NMEA 2000.
+                                        </p>
+                                </article>
+
+                                <div class="nmea-problem-points">
+                                        <article>
+                                                <span aria-hidden="true">
+                                                        ≋
+                                                </span>
+
+                                                <div>
+                                                        <h3>
+                                                                Diferentes sinais
+                                                        </h3>
+
+                                                        <p>
+                                                                Entradas em tensão, corrente e sinais
+                                                                digitais com diferentes níveis elétricos.
+                                                        </p>
+                                                </div>
+                                        </article>
+
+                                        <article>
+                                                <span aria-hidden="true">
+                                                        ⛨
+                                                </span>
+
+                                                <div>
+                                                        <h3>
+                                                                Ambiente exigente
+                                                        </h3>
+
+                                                        <p>
+                                                                Ruído eletromagnético, transitórios
+                                                                elétricos e diferenças entre referências
+                                                                de massa.
+                                                        </p>
+                                                </div>
+                                        </article>
+
+                                        <article>
+                                                <span aria-hidden="true">
+                                                        ⇄
+                                                </span>
+
+                                                <div>
+                                                        <h3>
+                                                                Integração
+                                                        </h3>
+
+                                                        <p>
+                                                                Comunicação local através de CAN e
+                                                                monitorização remota através de Wi-Fi
+                                                                e MQTT.
+                                                        </p>
+                                                </div>
+                                        </article>
+                                </div>
+                        </div>
+                </section>
+
+                <section class="section nmea-architecture-section">
+                        <div class="section-header">
+                                <p class="section-label">
+                                        Arquitetura
+                                </p>
+
+                                <h2>
+                                        Fluxo funcional
+                                </h2>
+
+                                <p class="section-description">
+                                        A arquitetura separou a aquisição, o condicionamento,
+                                        o processamento local e as interfaces de comunicação.
+                                </p>
+                        </div>
+
+                        <div class="nmea-flow">
+                                <article class="nmea-flow-block">
+                                        <span class="nmea-flow-number">
+                                                01
+                                        </span>
+
+                                        <div class="nmea-flow-icon">
+                                                IN
+                                        </div>
+
+                                        <h3>
+                                                Sensores
+                                        </h3>
+
+                                        <p>
+                                                Sinais analógicos de tensão e corrente e entradas
+                                                digitais provenientes da embarcação.
+                                        </p>
+                                </article>
+
+                                <span
+                                        class="nmea-flow-arrow"
+                                        aria-hidden="true"
+                                >
+                                        →
+                                </span>
+
+                                <article class="nmea-flow-block">
+                                        <span class="nmea-flow-number">
+                                                02
+                                        </span>
+
+                                        <div class="nmea-flow-icon">
+                                                ADC
+                                        </div>
+
+                                        <h3>
+                                                Condicionamento
+                                        </h3>
+
+                                        <p>
+                                                Divisores de tensão, resistências de shunt,
+                                                proteção elétrica e seleção através de jumpers.
+                                        </p>
+                                </article>
+
+                                <span
+                                        class="nmea-flow-arrow"
+                                        aria-hidden="true"
+                                >
+                                        →
+                                </span>
+
+                                <article class="nmea-flow-block">
+                                        <span class="nmea-flow-number">
+                                                03
+                                        </span>
+
+                                        <div class="nmea-flow-icon">
+                                                μC
+                                        </div>
+
+                                        <h3>
+                                                Processamento
+                                        </h3>
+
+                                        <p>
+                                                Quatro ADS1115 comunicam por I²C com o ESP32,
+                                                responsável pelo processamento dos dados.
+                                        </p>
+                                </article>
+
+                                <span
+                                        class="nmea-flow-arrow"
+                                        aria-hidden="true"
+                                >
+                                        →
+                                </span>
+
+                                <article class="nmea-flow-block">
+                                        <span class="nmea-flow-number">
+                                                04
+                                        </span>
+
+                                        <div class="nmea-flow-icon">
+                                                TX
+                                        </div>
+
+                                        <h3>
+                                                Comunicação
+                                        </h3>
+
+                                        <p>
+                                                Disponibilização dos dados através de CAN e
+                                                publicação remota através de MQTT.
+                                        </p>
+                                </article>
+                        </div>
+                </section>
+
+                <section class="section nmea-development-section">
+                        <div class="section-header">
+                                <p class="section-label">
+                                        Implementação
+                                </p>
+
+                                <h2>
+                                        Hardware e firmware
+                                </h2>
+                        </div>
+
+                        <div class="nmea-development-grid">
+                                <article class="nmea-development-card">
+                                        <div class="nmea-development-heading">
+                                                <span>
+                                                        HW
+                                                </span>
+
+                                                <div>
+                                                        <p class="project-category">
+                                                                Eletrónica
+                                                        </p>
+
+                                                        <h3>
+                                                                Hardware desenvolvido
+                                                        </h3>
+                                                </div>
+                                        </div>
+
+                                        <div class="nmea-feature-list">
+                                                <div>
+                                                        <strong>
+                                                                Alimentação
+                                                        </strong>
+
+                                                        <p>
+                                                                Proteção TVS, filtro π, conversor buck
+                                                                para 5 V e regulador LDO para 3,3 V.
+                                                        </p>
+                                                </div>
+
+                                                <div>
+                                                        <strong>
+                                                                Aquisição analógica
+                                                        </strong>
+
+                                                        <p>
+                                                                Dezasseis canais configuráveis para
+                                                                sinais de 0–10 V ou 4–20 mA.
+                                                        </p>
+                                                </div>
+
+                                                <div>
+                                                        <strong>
+                                                                Aquisição digital
+                                                        </strong>
+
+                                                        <p>
+                                                                Oito entradas desacopladas através de
+                                                                optoacopladores, com lógica invertida.
+                                                        </p>
+                                                </div>
+
+                                                <div>
+                                                        <strong>
+                                                                Comunicação CAN
+                                                        </strong>
+
+                                                        <p>
+                                                                Interface física baseada no
+                                                                transceiver isolado ISO1044.
+                                                        </p>
+                                                </div>
+
+                                                <div>
+                                                        <strong>
+                                                                Construção
+                                                        </strong>
+
+                                                        <p>
+                                                                PCB compacta concebida no KiCad para
+                                                                montagem numa caixa de calha DIN.
+                                                        </p>
+                                                </div>
+                                        </div>
+                                </article>
+
+                                <article class="nmea-development-card">
+                                        <div class="nmea-development-heading">
+                                                <span>
+                                                        FW
+                                                </span>
+
+                                                <div>
+                                                        <p class="project-category">
+                                                                Sistemas embebidos
+                                                        </p>
+
+                                                        <h3>
+                                                                Firmware desenvolvido
+                                                        </h3>
+                                                </div>
+                                        </div>
+
+                                        <div class="nmea-feature-list">
+                                                <div>
+                                                        <strong>
+                                                                Estrutura modular
+                                                        </strong>
+
+                                                        <p>
+                                                                Separação entre aquisição analógica,
+                                                                entradas digitais, CAN, MQTT,
+                                                                armazenamento e configuração.
+                                                        </p>
+                                                </div>
+
+                                                <div>
+                                                        <strong>
+                                                                Configuração persistente
+                                                        </strong>
+
+                                                        <p>
+                                                                Utilização da memória NVS para guardar
+                                                                parâmetros após reinício ou perda de
+                                                                alimentação.
+                                                        </p>
+                                                </div>
+
+                                                <div>
+                                                        <strong>
+                                                                Interface série
+                                                        </strong>
+
+                                                        <p>
+                                                                Comandos para diagnóstico, alteração
+                                                                de parâmetros e configuração da placa.
+                                                        </p>
+                                                </div>
+
+                                                <div>
+                                                        <strong>
+                                                                MQTT
+                                                        </strong>
+
+                                                        <p>
+                                                                Publicação periódica das entradas
+                                                                analógicas e digitais numa mensagem JSON.
+                                                        </p>
+                                                </div>
+
+                                                <div>
+                                                        <strong>
+                                                                Dashboard
+                                                        </strong>
+
+                                                        <p>
+                                                                Página Web auxiliar para acompanhar
+                                                                leituras e estados das comunicações.
+                                                        </p>
+                                                </div>
+                                        </div>
+                                </article>
+                        </div>
+                </section>
+
+                <section class="section nmea-tests-section">
+                        <div class="section-header">
+                                <p class="section-label">
+                                        Validação experimental
+                                </p>
+
+                                <h2>
+                                        Testes realizados
+                                </h2>
+
+                                <p class="section-description">
+                                        Os subsistemas foram testados individualmente antes
+                                        da integração global.
+                                </p>
+                        </div>
+
+                        <div class="nmea-tests-grid">
+                                <article>
+                                        <span class="nmea-test-status">
+                                                Validado
+                                        </span>
+
+                                        <strong>
+                                                Alimentação
+                                        </strong>
+
+                                        <p>
+                                                Verificação das tensões de alimentação e do
+                                                funcionamento dos principais blocos da PCB.
+                                        </p>
+                                </article>
+
+                                <article>
+                                        <span class="nmea-test-status">
+                                                Validado
+                                        </span>
+
+                                        <strong>
+                                                Barramento I²C
+                                        </strong>
+
+                                        <p>
+                                                Deteção dos quatro ADS1115 e observação dos sinais
+                                                SDA e SCL através do osciloscópio.
+                                        </p>
+                                </article>
+
+                                <article>
+                                        <span class="nmea-test-status">
+                                                Validado
+                                        </span>
+
+                                        <strong>
+                                                Entradas analógicas
+                                        </strong>
+
+                                        <p>
+                                                Ensaios em tensão a 10 V e em corrente a
+                                                18,5 mA nos dezasseis canais.
+                                        </p>
+                                </article>
+
+                                <article>
+                                        <span class="nmea-test-status">
+                                                Validado
+                                        </span>
+
+                                        <strong>
+                                                Entradas digitais
+                                        </strong>
+
+                                        <p>
+                                                Aplicação de 24 V para confirmar os
+                                                optoacopladores e a lógica invertida.
+                                        </p>
+                                </article>
+
+                                <article>
+                                        <span class="nmea-test-status">
+                                                Validado
+                                        </span>
+
+                                        <strong>
+                                                Wi-Fi e MQTT
+                                        </strong>
+
+                                        <p>
+                                                Ligação à rede e publicação remota das leituras
+                                                adquiridas através de mensagens JSON.
+                                        </p>
+                                </article>
+
+                                <article>
+                                        <span class="nmea-test-status">
+                                                CAN validado
+                                        </span>
+
+                                        <strong>
+                                                Comunicação entre placas
+                                        </strong>
+
+                                        <p>
+                                                Transmissão e receção de tramas CAN entre dois
+                                                módulos utilizando identificadores de 29 bits.
+                                        </p>
+                                </article>
+                        </div>
+
+                        <div class="nmea-media-grid">
+                                <figure
+                                        class="nmea-media-card"
+                                        data-fallback="Teste CAN entre duas placas"
+                                >
+                                        <img
+                                                src="assets/images/nmea/teste-can.jpeg"
+                                                alt="Ligação entre duas placas durante o teste CAN"
+                                                onerror="this.remove();"
+                                        >
+
+                                        <figcaption>
+                                                Comunicação CAN entre dois módulos
+                                        </figcaption>
+                                </figure>
+
+                                <figure
+                                        class="nmea-media-card"
+                                        data-fallback="Dashboard MQTT"
+                                >
+                                        <img
+                                                src="assets/images/nmea/dashboard-mqtt.jpeg"
+                                                alt="Dashboard utilizado nos testes Wi-Fi e MQTT"
+                                                onerror="this.remove();"
+                                        >
+
+                                        <figcaption>
+                                                Dashboard de diagnóstico e MQTT
+                                        </figcaption>
+                                </figure>
+                        </div>
+                </section>
+
+                <section class="section nmea-debug-section">
+                        <div class="section-header">
+                                <p class="section-label">
+                                        Engenharia na prática
+                                </p>
+
+                                <h2>
+                                        Um problema identificado durante os testes
+                                </h2>
+                        </div>
+
+                        <div class="nmea-debug-layout">
+                                <div class="nmea-debug-description">
+                                        <p>
+                                                Durante os primeiros ensaios, o barramento CAN
+                                                não apresentou os níveis elétricos esperados.
+                                        </p>
+
+                                        <p>
+                                                A análise do circuito permitiu concluir que o lado
+                                                CAN do transceiver ISO1044 estava a ser alimentado
+                                                com 3,3 V isolados, apesar de necessitar de uma
+                                                alimentação compreendida entre 4,5 V e 5,5 V.
+                                        </p>
+
+                                        <p>
+                                                O conversor DC/DC isolado foi substituído por uma
+                                                versão com saída de 5 V. Após esta correção,
+                                                as duas placas transmitiram e receberam mensagens
+                                                sem erros de comunicação.
+                                        </p>
+                                </div>
+
+                                <div class="nmea-debug-comparison">
+                                        <article class="nmea-debug-before">
+                                                <span>
+                                                        Antes
+                                                </span>
+
+                                                <strong>
+                                                        3,3 V isolados
+                                                </strong>
+
+                                                <small>
+                                                        Alimentação incompatível com o lado CAN
+                                                        do ISO1044
+                                                </small>
+                                        </article>
+
+                                        <span
+                                                class="nmea-debug-arrow"
+                                                aria-hidden="true"
+                                        >
+                                                →
+                                        </span>
+
+                                        <article class="nmea-debug-after">
+                                                <span>
+                                                        Correção
+                                                </span>
+
+                                                <strong>
+                                                        5 V isolados
+                                                </strong>
+
+                                                <small>
+                                                        Comunicação CAN estabelecida entre as
+                                                        duas placas
+                                                </small>
+                                        </article>
+                                </div>
+                        </div>
+                </section>
+
+                <section class="section nmea-results-section">
+                        <div class="nmea-results">
+                                <div>
+                                        <p class="section-label">
+                                                Resultado
+                                        </p>
+
+                                        <h2>
+                                                Uma primeira versão funcional e validada por
+                                                subsistemas
+                                        </h2>
+                                </div>
+
+                                <div class="nmea-results-text">
+                                        <p>
+                                                O projeto demonstrou o funcionamento da aquisição
+                                                analógica e digital, do processamento local,
+                                                da comunicação MQTT e da camada CAN entre duas
+                                                placas.
+                                        </p>
+
+                                        <p>
+                                                A integração completa numa rede NMEA 2000 real,
+                                                com equipamentos comerciais e PGNs finais da
+                                                aplicação, permaneceu como etapa futura.
+                                        </p>
+
+                                        <div class="nmea-results-tags">
+                                                <span>
+                                                        PCB desenvolvida
+                                                </span>
+
+                                                <span>
+                                                        Firmware funcional
+                                                </span>
+
+                                                <span>
+                                                        MQTT validado
+                                                </span>
+
+                                                <span>
+                                                        CAN validado
+                                                </span>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        </main>
+
+        <footer class="footer">
+                <p>
+                        © <span id="current-year"></span> Guilherme Braga.
+                </p>
+        </footer>
+
+        <script src="js/main.js"></script>
+</body>
+</html>
