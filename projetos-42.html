@@ -15,7 +15,7 @@
 
         <title>Projetos 42 | Guilherme Braga</title>
 
-        <link rel="stylesheet" href="css/style.css?v=7">
+        <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 
 <body>
@@ -27,19 +27,37 @@
 
                         <ul class="nav-links">
                                 <li>
-                                        <a href="index.html#inicio">
+                                        <a
+                                                href="index.html#inicio"
+                                                data-i18n="nav.home"
+                                        >
                                                 Início
                                         </a>
                                 </li>
 
                                 <li>
-                                        <a href="index.html#sobre">
+                                        <a
+                                                href="index.html#sobre"
+                                                data-i18n="nav.about"
+                                        >
                                                 Sobre
                                         </a>
                                 </li>
 
                                 <li>
-                                        <a href="index.html#projetos">
+                                        <a
+                                                href="index.html#competencias"
+                                                data-i18n="nav.skills"
+                                        >
+                                                Competências
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a
+                                                href="index.html#projetos"
+                                                data-i18n="nav.projects"
+                                        >
                                                 Projetos
                                         </a>
                                 </li>
@@ -54,11 +72,44 @@
                                 </li>
 
                                 <li>
-                                        <a href="index.html#contactos">
+                                        <a
+                                                href="index.html#contactos"
+                                                data-i18n="nav.contacts"
+                                        >
                                                 Contactos
                                         </a>
                                 </li>
                         </ul>
+
+                        <div
+                                class="language-switcher"
+                                aria-label="Selecionar idioma"
+                                data-i18n-attr="aria-label:language.selector"
+                        >
+                                <button
+                                        type="button"
+                                        class="language-button active"
+                                        data-language="pt"
+                                        aria-label="Mudar idioma para português"
+                                        data-i18n-attr="aria-label:language.portuguese"
+                                >
+                                        PT
+                                </button>
+
+                                <span aria-hidden="true">
+                                        /
+                                </span>
+
+                                <button
+                                        type="button"
+                                        class="language-button"
+                                        data-language="en"
+                                        aria-label="Mudar idioma para inglês"
+                                        data-i18n-attr="aria-label:language.english"
+                                >
+                                        EN
+                                </button>
+                        </div>
                 </nav>
         </header>
 
@@ -74,41 +125,42 @@
                                                         ←
                                                 </span>
 
-                                                Voltar ao portefólio
+                                                <span data-i18n="fortyTwo.back">
+                                                        Voltar ao portefólio
+                                                </span>
                                         </a>
 
-                                        <p class="hero-label">
+                                        <p
+                                                class="hero-label"
+                                                data-i18n="fortyTwo.hero.label"
+                                        >
                                                 Programação e sistemas
                                         </p>
 
-                                        <h1>
+                                        <h1 data-i18n-html="fortyTwo.hero.title">
                                                 Projetos desenvolvidos na
+
                                                 <span class="highlight-text">
-                                                        42
+                                                        42 PORTO
                                                 </span>
                                         </h1>
 
-                                        <p class="forty-two-introduction">
+                                        <p
+                                                class="forty-two-introduction"
+                                                data-i18n="fortyTwo.hero.description"
+                                        >
                                                 Uma coleção de projetos centrados em programação
                                                 em C, resolução de problemas, gestão de memória,
                                                 sistemas UNIX, comunicação entre processos e
                                                 desenvolvimento gráfico.
                                         </p>
-
-                                        <div class="forty-two-skills">
-                                                <span>C</span>
-                                                <span>Linux</span>
-                                                <span>UNIX</span>
-                                                <span>Algoritmia</span>
-                                                <span>Memória</span>
-                                                <span>Processos</span>
-                                        </div>
                                 </div>
 
                                 <div
                                         class="forty-two-mark"
                                         role="img"
                                         aria-label="Número 42 formado por caracteres em movimento"
+                                        data-i18n-attr="aria-label:fortyTwo.hero.animationAlt"
                                 >
                                         <canvas id="matrix-42-canvas"></canvas>
 
@@ -121,15 +173,21 @@
 
                 <section class="section forty-two-projects-section">
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="fortyTwo.projects.label"
+                                >
                                         Percurso 42
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="fortyTwo.projects.title">
                                         Projetos
                                 </h2>
 
-                                <p class="section-description">
+                                <p
+                                        class="section-description"
+                                        data-i18n="fortyTwo.projects.description"
+                                >
                                         Cada projeto introduziu novos problemas e exigiu uma
                                         compreensão progressivamente mais profunda da linguagem C,
                                         dos sistemas UNIX e da organização de software.
@@ -163,7 +221,10 @@
                                                         01
                                                 </div>
 
-                                                <p class="project-category">
+                                                <p
+                                                        class="project-category"
+                                                        data-i18n="fortyTwo.projects.libft.category"
+                                                >
                                                         Biblioteca em C
                                                 </p>
 
@@ -171,19 +232,13 @@
                                                         Libft
                                                 </h3>
 
-                                                <p>
+                                                <p data-i18n="fortyTwo.projects.libft.description">
                                                         Criação de uma biblioteca própria através
-                                                        da reimplementação de funções da biblioteca
-                                                        padrão de C e do desenvolvimento de funções
-                                                        auxiliares adicionais.
+                                                        da reimplementação das funções padrão da
+                                                        linguagem C. Foi o primeiro projeto e
+                                                        permitiu construir uma base sólida para
+                                                        os projetos subsequentes.
                                                 </p>
-
-                                                <div class="project-tags">
-                                                        <span>C</span>
-                                                        <span>Memória</span>
-                                                        <span>Ponteiros</span>
-                                                        <span>Bibliotecas</span>
-                                                </div>
 
                                                 <a
                                                         href="https://github.com/PSGui?tab=repositories&q=libft"
@@ -191,7 +246,9 @@
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                 >
-                                                        Ver repositório
+                                                        <span data-i18n="fortyTwo.projects.repository">
+                                                                Ver repositório
+                                                        </span>
 
                                                         <span aria-hidden="true">
                                                                 ↗
@@ -232,7 +289,10 @@
                                                         02
                                                 </div>
 
-                                                <p class="project-category">
+                                                <p
+                                                        class="project-category"
+                                                        data-i18n="fortyTwo.projects.printf.category"
+                                                >
                                                         Formatação de texto
                                                 </p>
 
@@ -240,18 +300,12 @@
                                                         ft_printf
                                                 </h3>
 
-                                                <p>
-                                                        Reimplementação da função printf, incluindo
-                                                        o tratamento de argumentos variádicos,
-                                                        conversões de dados e formatação da saída.
+                                                <p data-i18n="fortyTwo.projects.printf.description">
+                                                        Reimplementação da função printf. Um projeto
+                                                        particularmente interessante por envolver a
+                                                        criação de uma função capaz de aceitar um
+                                                        número variável de argumentos.
                                                 </p>
-
-                                                <div class="project-tags">
-                                                        <span>C</span>
-                                                        <span>Variadic</span>
-                                                        <span>Parsing</span>
-                                                        <span>Formatação</span>
-                                                </div>
 
                                                 <a
                                                         href="https://github.com/PSGui?tab=repositories&q=printf"
@@ -259,7 +313,9 @@
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                 >
-                                                        Ver repositório
+                                                        <span data-i18n="fortyTwo.projects.repository">
+                                                                Ver repositório
+                                                        </span>
 
                                                         <span aria-hidden="true">
                                                                 ↗
@@ -303,7 +359,10 @@
                                                         03
                                                 </div>
 
-                                                <p class="project-category">
+                                                <p
+                                                        class="project-category"
+                                                        data-i18n="fortyTwo.projects.gnl.category"
+                                                >
                                                         Leitura de ficheiros
                                                 </p>
 
@@ -311,19 +370,12 @@
                                                         get_next_line
                                                 </h3>
 
-                                                <p>
+                                                <p data-i18n="fortyTwo.projects.gnl.description">
                                                         Desenvolvimento de uma função capaz de ler
                                                         um ficheiro linha a linha, mantendo o estado
                                                         entre chamadas e controlando corretamente a
                                                         memória dinâmica.
                                                 </p>
-
-                                                <div class="project-tags">
-                                                        <span>C</span>
-                                                        <span>File descriptors</span>
-                                                        <span>Buffers</span>
-                                                        <span>Static</span>
-                                                </div>
 
                                                 <a
                                                         href="https://github.com/PSGui?tab=repositories&q=next"
@@ -331,7 +383,9 @@
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                 >
-                                                        Ver repositório
+                                                        <span data-i18n="fortyTwo.projects.repository">
+                                                                Ver repositório
+                                                        </span>
 
                                                         <span aria-hidden="true">
                                                                 ↗
@@ -378,7 +432,10 @@
                                                         04
                                                 </div>
 
-                                                <p class="project-category">
+                                                <p
+                                                        class="project-category"
+                                                        data-i18n="fortyTwo.projects.minitalk.category"
+                                                >
                                                         Comunicação entre processos
                                                 </p>
 
@@ -386,18 +443,11 @@
                                                         Minitalk
                                                 </h3>
 
-                                                <p>
+                                                <p data-i18n="fortyTwo.projects.minitalk.description">
                                                         Implementação de um sistema cliente-servidor
                                                         que transmite mensagens entre processos
                                                         utilizando exclusivamente sinais UNIX.
                                                 </p>
-
-                                                <div class="project-tags">
-                                                        <span>C</span>
-                                                        <span>Signals</span>
-                                                        <span>IPC</span>
-                                                        <span>UNIX</span>
-                                                </div>
 
                                                 <a
                                                         href="https://github.com/PSGui?tab=repositories&q=minitalk"
@@ -405,7 +455,9 @@
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                 >
-                                                        Ver repositório
+                                                        <span data-i18n="fortyTwo.projects.repository">
+                                                                Ver repositório
+                                                        </span>
 
                                                         <span aria-hidden="true">
                                                                 ↗
@@ -467,7 +519,10 @@
                                                         05
                                                 </div>
 
-                                                <p class="project-category">
+                                                <p
+                                                        class="project-category"
+                                                        data-i18n="fortyTwo.projects.soLong.category"
+                                                >
                                                         Programação gráfica
                                                 </p>
 
@@ -475,21 +530,13 @@
                                                         So Long
                                                 </h3>
 
-                                                <p>
-                                                        Desenvolvimento de um pequeno jogo em duas
-                                                        dimensões, incluindo leitura e validação de
-                                                        mapas, movimentação do jogador, recolha de
-                                                        objetos, deteção de colisões e representação
+                                                <p data-i18n="fortyTwo.projects.soLong.description">
+                                                        Desenvolvimento de um pequeno jogo 2D,
+                                                        incluindo leitura e validação de mapas,
+                                                        movimentação do jogador, recolha de objetos,
+                                                        deteção de colisões e representação
                                                         gráfica através da MiniLibX.
                                                 </p>
-
-                                                <div class="project-tags">
-                                                        <span>C</span>
-                                                        <span>MiniLibX</span>
-                                                        <span>Gráficos 2D</span>
-                                                        <span>Map parsing</span>
-                                                        <span>Eventos</span>
-                                                </div>
 
                                                 <a
                                                         href="https://github.com/PSGui?tab=repositories&q=so-long"
@@ -497,7 +544,9 @@
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                 >
-                                                        Ver repositório
+                                                        <span data-i18n="fortyTwo.projects.repository">
+                                                                Ver repositório
+                                                        </span>
 
                                                         <span aria-hidden="true">
                                                                 ↗
@@ -516,5 +565,6 @@
         </footer>
 
         <script src="js/main.js"></script>
+        <script src="js/lang.js"></script>
 </body>
 </html>

@@ -15,8 +15,8 @@
 
         <title>Projeto NMEA 2000 | Guilherme Braga</title>
 
-        <link rel="stylesheet" href="css/style.css?v=8">
-        <link rel="stylesheet" href="css/nmea.css?v=2">
+        <link rel="stylesheet" href="css/style.css?v=10">
+        <link rel="stylesheet" href="css/nmea.css?v=3">
 </head>
 
 <body>
@@ -28,14 +28,29 @@
 
                         <ul class="nav-links">
                                 <li>
-                                        <a href="index.html#inicio">
+                                        <a
+                                                href="index.html#inicio"
+                                                data-i18n="nav.home"
+                                        >
                                                 Início
                                         </a>
                                 </li>
 
                                 <li>
-                                        <a href="index.html#sobre">
+                                        <a
+                                                href="index.html#sobre"
+                                                data-i18n="nav.about"
+                                        >
                                                 Sobre
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a
+                                                href="index.html#competencias"
+                                                data-i18n="nav.skills"
+                                        >
+                                                Competências
                                         </a>
                                 </li>
 
@@ -43,6 +58,7 @@
                                         <a
                                                 href="index.html#projetos"
                                                 class="active"
+                                                data-i18n="nav.projects"
                                         >
                                                 Projetos
                                         </a>
@@ -55,11 +71,44 @@
                                 </li>
 
                                 <li>
-                                        <a href="index.html#contactos">
+                                        <a
+                                                href="index.html#contactos"
+                                                data-i18n="nav.contacts"
+                                        >
                                                 Contactos
                                         </a>
                                 </li>
                         </ul>
+
+                        <div
+                                class="language-switcher"
+                                aria-label="Selecionar idioma"
+                                data-i18n-attr="aria-label:language.selector"
+                        >
+                                <button
+                                        type="button"
+                                        class="language-button active"
+                                        data-language="pt"
+                                        aria-label="Mudar idioma para português"
+                                        data-i18n-attr="aria-label:language.portuguese"
+                                >
+                                        PT
+                                </button>
+
+                                <span aria-hidden="true">
+                                        /
+                                </span>
+
+                                <button
+                                        type="button"
+                                        class="language-button"
+                                        data-language="en"
+                                        aria-label="Mudar idioma para inglês"
+                                        data-i18n-attr="aria-label:language.english"
+                                >
+                                        EN
+                                </button>
+                        </div>
                 </nav>
         </header>
 
@@ -75,14 +124,19 @@
                                                         ←
                                                 </span>
 
-                                                Voltar ao portefólio
+                                                <span data-i18n="nmea.back">
+                                                        Voltar ao portefólio
+                                                </span>
                                         </a>
 
-                                        <p class="hero-label">
+                                        <p
+                                                class="hero-label"
+                                                data-i18n="nmea.hero.label"
+                                        >
                                                 Projeto de estágio · OSTIUM
                                         </p>
 
-                                        <h1>
+                                        <h1 data-i18n-html="nmea.hero.title">
                                                 Módulo de aquisição de dados para
                                                 integração em sistemas
 
@@ -91,7 +145,10 @@
                                                 </span>
                                         </h1>
 
-                                        <p class="nmea-hero-description">
+                                        <p
+                                                class="nmea-hero-description"
+                                                data-i18n="nmea.hero.description"
+                                        >
                                                 Desenvolvimento de uma placa eletrónica capaz
                                                 de adquirir sinais analógicos e digitais,
                                                 processar os valores localmente e disponibilizar
@@ -111,32 +168,17 @@
 
                                 <div class="nmea-board-showcase">
                                         <div class="nmea-board-frame">
-                                                <div class="nmea-board-frame-header">
-                                                        <div class="nmea-board-frame-title">
-                                                                <span class="nmea-frame-dot"></span>
-                                                                Protótipo físico
-                                                        </div>
-
-                                                        <span class="nmea-board-frame-meta">
-                                                                OSTIUM
-                                                        </span>
-                                                </div>
-
                                                 <figure
                                                         class="nmea-board-image"
                                                         data-fallback="PCB NMEA 2000"
                                                 >
                                                         <img
-                                                                src="assets/images/PCB_vista_geral.jpeg"
+                                                                src="assets/images/PCB_vista_geral.png"
                                                                 alt="PCB desenvolvida para o módulo de aquisição NMEA 2000"
+                                                                data-i18n-attr="alt:nmea.hero.imageAlt"
                                                                 onerror="this.remove();"
                                                         >
                                                 </figure>
-                                        </div>
-
-                                        <div class="nmea-board-label">
-                                                <span></span>
-                                                PCB desenvolvida e testada
                                         </div>
                                 </div>
                         </div>
@@ -149,7 +191,7 @@
                                                 16
                                         </strong>
 
-                                        <span>
+                                        <span data-i18n="nmea.stats.analogue">
                                                 Entradas analógicas
                                         </span>
 
@@ -163,11 +205,11 @@
                                                 8
                                         </strong>
 
-                                        <span>
+                                        <span data-i18n="nmea.stats.digital">
                                                 Entradas digitais
                                         </span>
 
-                                        <small>
+                                        <small data-i18n="nmea.stats.digitalDetail">
                                                 Isoladas por optoacoplador
                                         </small>
                                 </article>
@@ -177,11 +219,11 @@
                                                 4
                                         </strong>
 
-                                        <span>
+                                        <span data-i18n="nmea.stats.converters">
                                                 Conversores ADS1115
                                         </span>
 
-                                        <small>
+                                        <small data-i18n="nmea.stats.converterDetail">
                                                 ADC de 16 bits por I²C
                                         </small>
                                 </article>
@@ -195,7 +237,7 @@
                                                 kbit/s
                                         </span>
 
-                                        <small>
+                                        <small data-i18n="nmea.stats.can">
                                                 Comunicação CAN
                                         </small>
                                 </article>
@@ -204,18 +246,25 @@
 
                 <section class="section nmea-problem-section">
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="nmea.problem.label"
+                                >
                                         Enquadramento
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="nmea.problem.title">
                                         O problema
                                 </h2>
 
-                                <p class="section-description">
-                                        Modernizar a instrumentação de uma embarcação não
-                                        implica necessariamente substituir todos os sensores
-                                        existentes.
+                                <p
+                                        class="section-description"
+                                        data-i18n="nmea.problem.description"
+                                >
+                                        Realizar a sensorização de embarcações com sensores
+                                        convencionais e disponibilizar os dados para utilização,
+                                        quer localmente através de CAN, quer remotamente através
+                                        de Wi-Fi e MQTT.
                                 </p>
                         </div>
 
@@ -225,17 +274,17 @@
                                                 01
                                         </span>
 
-                                        <h3>
+                                        <h3 data-i18n="nmea.problem.mainTitle">
                                                 Integrar sensores convencionais numa rede digital
                                         </h3>
 
-                                        <p>
+                                        <p data-i18n="nmea.problem.mainParagraphOne">
                                                 Muitas embarcações continuam equipadas com sensores
                                                 analógicos utilizados para medir nível, pressão,
                                                 temperatura e outras grandezas.
                                         </p>
 
-                                        <p>
+                                        <p data-i18n="nmea.problem.mainParagraphTwo">
                                                 O objetivo foi desenvolver uma interface capaz de
                                                 adquirir esses sinais, condicioná-los e prepará-los
                                                 para integração num sistema baseado em NMEA 2000.
@@ -249,11 +298,11 @@
                                                 </span>
 
                                                 <div>
-                                                        <h3>
+                                                        <h3 data-i18n="nmea.problem.signalsTitle">
                                                                 Diferentes sinais
                                                         </h3>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.problem.signalsDescription">
                                                                 Entradas em tensão, corrente e sinais
                                                                 digitais com diferentes níveis elétricos.
                                                         </p>
@@ -266,11 +315,11 @@
                                                 </span>
 
                                                 <div>
-                                                        <h3>
+                                                        <h3 data-i18n="nmea.problem.environmentTitle">
                                                                 Ambiente exigente
                                                         </h3>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.problem.environmentDescription">
                                                                 Ruído eletromagnético, transitórios
                                                                 elétricos e diferenças entre referências
                                                                 de massa.
@@ -284,11 +333,11 @@
                                                 </span>
 
                                                 <div>
-                                                        <h3>
+                                                        <h3 data-i18n="nmea.problem.integrationTitle">
                                                                 Integração
                                                         </h3>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.problem.integrationDescription">
                                                                 Comunicação local através de CAN e
                                                                 monitorização remota através de Wi-Fi
                                                                 e MQTT.
@@ -301,15 +350,21 @@
 
                 <section class="section nmea-architecture-section">
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="nmea.architecture.label"
+                                >
                                         Arquitetura
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="nmea.architecture.title">
                                         Fluxo funcional
                                 </h2>
 
-                                <p class="section-description">
+                                <p
+                                        class="section-description"
+                                        data-i18n="nmea.architecture.description"
+                                >
                                         A arquitetura separou a aquisição, o condicionamento,
                                         o processamento local e as interfaces de comunicação.
                                 </p>
@@ -325,11 +380,11 @@
                                                 IN
                                         </div>
 
-                                        <h3>
+                                        <h3 data-i18n="nmea.architecture.sensorsTitle">
                                                 Sensores
                                         </h3>
 
-                                        <p>
+                                        <p data-i18n="nmea.architecture.sensorsDescription">
                                                 Sinais analógicos de tensão e corrente e entradas
                                                 digitais provenientes da embarcação.
                                         </p>
@@ -351,11 +406,11 @@
                                                 ADC
                                         </div>
 
-                                        <h3>
+                                        <h3 data-i18n="nmea.architecture.conditioningTitle">
                                                 Condicionamento
                                         </h3>
 
-                                        <p>
+                                        <p data-i18n="nmea.architecture.conditioningDescription">
                                                 Divisores de tensão, resistências de shunt,
                                                 proteção elétrica e seleção através de jumpers.
                                         </p>
@@ -377,11 +432,11 @@
                                                 μC
                                         </div>
 
-                                        <h3>
+                                        <h3 data-i18n="nmea.architecture.processingTitle">
                                                 Processamento
                                         </h3>
 
-                                        <p>
+                                        <p data-i18n="nmea.architecture.processingDescription">
                                                 Quatro ADS1115 comunicam por I²C com o ESP32,
                                                 responsável pelo processamento dos dados.
                                         </p>
@@ -403,11 +458,11 @@
                                                 TX
                                         </div>
 
-                                        <h3>
+                                        <h3 data-i18n="nmea.architecture.communicationTitle">
                                                 Comunicação
                                         </h3>
 
-                                        <p>
+                                        <p data-i18n="nmea.architecture.communicationDescription">
                                                 Disponibilização dos dados através de CAN e
                                                 publicação remota através de MQTT.
                                         </p>
@@ -417,11 +472,14 @@
 
                 <section class="section nmea-development-section">
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="nmea.development.label"
+                                >
                                         Implementação
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="nmea.development.title">
                                         Hardware e firmware
                                 </h2>
                         </div>
@@ -434,11 +492,14 @@
                                                 </span>
 
                                                 <div>
-                                                        <p class="project-category">
+                                                        <p
+                                                                class="project-category"
+                                                                data-i18n="nmea.development.hardware.category"
+                                                        >
                                                                 Eletrónica
                                                         </p>
 
-                                                        <h3>
+                                                        <h3 data-i18n="nmea.development.hardware.title">
                                                                 Hardware desenvolvido
                                                         </h3>
                                                 </div>
@@ -446,55 +507,55 @@
 
                                         <div class="nmea-feature-list">
                                                 <div>
-                                                        <strong>
+                                                        <strong data-i18n="nmea.development.hardware.powerTitle">
                                                                 Alimentação
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.hardware.powerDescription">
                                                                 Proteção TVS, filtro π, conversor buck
                                                                 para 5 V e regulador LDO para 3,3 V.
                                                         </p>
                                                 </div>
 
                                                 <div>
-                                                        <strong>
+                                                        <strong data-i18n="nmea.development.hardware.analogueTitle">
                                                                 Aquisição analógica
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.hardware.analogueDescription">
                                                                 Dezasseis canais configuráveis para
                                                                 sinais de 0–10 V ou 4–20 mA.
                                                         </p>
                                                 </div>
 
                                                 <div>
-                                                        <strong>
+                                                        <strong data-i18n="nmea.development.hardware.digitalTitle">
                                                                 Aquisição digital
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.hardware.digitalDescription">
                                                                 Oito entradas desacopladas através de
                                                                 optoacopladores, com lógica invertida.
                                                         </p>
                                                 </div>
 
                                                 <div>
-                                                        <strong>
+                                                        <strong data-i18n="nmea.development.hardware.canTitle">
                                                                 Comunicação CAN
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.hardware.canDescription">
                                                                 Interface física baseada no
                                                                 transceiver isolado ISO1044.
                                                         </p>
                                                 </div>
 
                                                 <div>
-                                                        <strong>
+                                                        <strong data-i18n="nmea.development.hardware.constructionTitle">
                                                                 Construção
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.hardware.constructionDescription">
                                                                 PCB compacta concebida no KiCad para
                                                                 montagem numa caixa de calha DIN.
                                                         </p>
@@ -509,11 +570,14 @@
                                                 </span>
 
                                                 <div>
-                                                        <p class="project-category">
+                                                        <p
+                                                                class="project-category"
+                                                                data-i18n="nmea.development.firmware.category"
+                                                        >
                                                                 Sistemas embebidos
                                                         </p>
 
-                                                        <h3>
+                                                        <h3 data-i18n="nmea.development.firmware.title">
                                                                 Firmware desenvolvido
                                                         </h3>
                                                 </div>
@@ -521,11 +585,11 @@
 
                                         <div class="nmea-feature-list">
                                                 <div>
-                                                        <strong>
+                                                        <strong data-i18n="nmea.development.firmware.modularTitle">
                                                                 Estrutura modular
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.firmware.modularDescription">
                                                                 Separação entre aquisição analógica,
                                                                 entradas digitais, CAN, MQTT,
                                                                 armazenamento e configuração.
@@ -533,11 +597,11 @@
                                                 </div>
 
                                                 <div>
-                                                        <strong>
+                                                        <strong data-i18n="nmea.development.firmware.storageTitle">
                                                                 Configuração persistente
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.firmware.storageDescription">
                                                                 Utilização da memória NVS para guardar
                                                                 parâmetros após reinício ou perda de
                                                                 alimentação.
@@ -545,11 +609,11 @@
                                                 </div>
 
                                                 <div>
-                                                        <strong>
+                                                        <strong data-i18n="nmea.development.firmware.serialTitle">
                                                                 Interface série
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.firmware.serialDescription">
                                                                 Comandos para diagnóstico, alteração
                                                                 de parâmetros e configuração da placa.
                                                         </p>
@@ -560,7 +624,7 @@
                                                                 MQTT
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.firmware.mqttDescription">
                                                                 Publicação periódica das entradas
                                                                 analógicas e digitais numa mensagem JSON.
                                                         </p>
@@ -571,7 +635,7 @@
                                                                 Dashboard
                                                         </strong>
 
-                                                        <p>
+                                                        <p data-i18n="nmea.development.firmware.dashboardDescription">
                                                                 Página Web auxiliar para acompanhar
                                                                 leituras e estados das comunicações.
                                                         </p>
@@ -583,15 +647,21 @@
 
                 <section class="section nmea-tests-section">
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="nmea.tests.label"
+                                >
                                         Validação experimental
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="nmea.tests.title">
                                         Testes realizados
                                 </h2>
 
-                                <p class="section-description">
+                                <p
+                                        class="section-description"
+                                        data-i18n="nmea.tests.description"
+                                >
                                         Os subsistemas foram testados individualmente antes
                                         da integração global.
                                 </p>
@@ -599,67 +669,82 @@
 
                         <div class="nmea-tests-grid">
                                 <article>
-                                        <span class="nmea-test-status">
+                                        <span
+                                                class="nmea-test-status"
+                                                data-i18n="nmea.tests.validated"
+                                        >
                                                 Validado
                                         </span>
 
-                                        <strong>
+                                        <strong data-i18n="nmea.tests.powerTitle">
                                                 Alimentação
                                         </strong>
 
-                                        <p>
+                                        <p data-i18n="nmea.tests.powerDescription">
                                                 Verificação das tensões de alimentação e do
                                                 funcionamento dos principais blocos da PCB.
                                         </p>
                                 </article>
 
                                 <article>
-                                        <span class="nmea-test-status">
+                                        <span
+                                                class="nmea-test-status"
+                                                data-i18n="nmea.tests.validated"
+                                        >
                                                 Validado
                                         </span>
 
-                                        <strong>
+                                        <strong data-i18n="nmea.tests.i2cTitle">
                                                 Barramento I²C
                                         </strong>
 
-                                        <p>
+                                        <p data-i18n="nmea.tests.i2cDescription">
                                                 Deteção dos quatro ADS1115 e observação dos sinais
                                                 SDA e SCL através do osciloscópio.
                                         </p>
                                 </article>
 
                                 <article>
-                                        <span class="nmea-test-status">
+                                        <span
+                                                class="nmea-test-status"
+                                                data-i18n="nmea.tests.validated"
+                                        >
                                                 Validado
                                         </span>
 
-                                        <strong>
+                                        <strong data-i18n="nmea.tests.analogueTitle">
                                                 Entradas analógicas
                                         </strong>
 
-                                        <p>
+                                        <p data-i18n="nmea.tests.analogueDescription">
                                                 Ensaios em tensão a 10 V e em corrente a
                                                 18,5 mA nos dezasseis canais.
                                         </p>
                                 </article>
 
                                 <article>
-                                        <span class="nmea-test-status">
+                                        <span
+                                                class="nmea-test-status"
+                                                data-i18n="nmea.tests.validated"
+                                        >
                                                 Validado
                                         </span>
 
-                                        <strong>
+                                        <strong data-i18n="nmea.tests.digitalTitle">
                                                 Entradas digitais
                                         </strong>
 
-                                        <p>
+                                        <p data-i18n="nmea.tests.digitalDescription">
                                                 Aplicação de 24 V para confirmar os
                                                 optoacopladores e a lógica invertida.
                                         </p>
                                 </article>
 
                                 <article>
-                                        <span class="nmea-test-status">
+                                        <span
+                                                class="nmea-test-status"
+                                                data-i18n="nmea.tests.validated"
+                                        >
                                                 Validado
                                         </span>
 
@@ -667,87 +752,61 @@
                                                 Wi-Fi e MQTT
                                         </strong>
 
-                                        <p>
+                                        <p data-i18n="nmea.tests.mqttDescription">
                                                 Ligação à rede e publicação remota das leituras
                                                 adquiridas através de mensagens JSON.
                                         </p>
                                 </article>
 
                                 <article>
-                                        <span class="nmea-test-status">
+                                        <span
+                                                class="nmea-test-status"
+                                                data-i18n="nmea.tests.canValidated"
+                                        >
                                                 CAN validado
                                         </span>
 
-                                        <strong>
+                                        <strong data-i18n="nmea.tests.canTitle">
                                                 Comunicação entre placas
                                         </strong>
 
-                                        <p>
+                                        <p data-i18n="nmea.tests.canDescription">
                                                 Transmissão e receção de tramas CAN entre dois
                                                 módulos utilizando identificadores de 29 bits.
                                         </p>
                                 </article>
                         </div>
-
-                        <div class="nmea-media-grid">
-                                <figure
-                                        class="nmea-media-card"
-                                        data-fallback="Teste CAN entre duas placas"
-                                >
-                                        <img
-                                                src="assets/images/nmea/teste-can.jpeg"
-                                                alt="Ligação entre duas placas durante o teste CAN"
-                                                onerror="this.remove();"
-                                        >
-
-                                        <figcaption>
-                                                Comunicação CAN entre dois módulos
-                                        </figcaption>
-                                </figure>
-
-                                <figure
-                                        class="nmea-media-card"
-                                        data-fallback="Dashboard MQTT"
-                                >
-                                        <img
-                                                src="assets/images/nmea/dashboard-mqtt.jpeg"
-                                                alt="Dashboard utilizado nos testes Wi-Fi e MQTT"
-                                                onerror="this.remove();"
-                                        >
-
-                                        <figcaption>
-                                                Dashboard de diagnóstico e MQTT
-                                        </figcaption>
-                                </figure>
-                        </div>
                 </section>
 
                 <section class="section nmea-debug-section">
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="nmea.debug.label"
+                                >
                                         Engenharia na prática
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="nmea.debug.title">
                                         Um problema identificado durante os testes
                                 </h2>
                         </div>
 
                         <div class="nmea-debug-layout">
                                 <div class="nmea-debug-description">
-                                        <p>
+                                        <p data-i18n="nmea.debug.paragraphOne">
                                                 Durante os primeiros ensaios, o barramento CAN
                                                 não apresentou os níveis elétricos esperados.
                                         </p>
 
-                                        <p>
+                                        <p data-i18n="nmea.debug.paragraphTwo">
                                                 A análise do circuito permitiu concluir que o lado
                                                 CAN do transceiver ISO1044 estava a ser alimentado
                                                 com 3,3 V isolados, apesar de necessitar de uma
                                                 alimentação compreendida entre 4,5 V e 5,5 V.
                                         </p>
 
-                                        <p>
+                                        <p data-i18n="nmea.debug.paragraphThree">
                                                 O conversor DC/DC isolado foi substituído por uma
                                                 versão com saída de 5 V. Após esta correção,
                                                 as duas placas transmitiram e receberam mensagens
@@ -757,15 +816,15 @@
 
                                 <div class="nmea-debug-comparison">
                                         <article class="nmea-debug-before">
-                                                <span>
+                                                <span data-i18n="nmea.debug.before">
                                                         Antes
                                                 </span>
 
-                                                <strong>
+                                                <strong data-i18n="nmea.debug.beforeVoltage">
                                                         3,3 V isolados
                                                 </strong>
 
-                                                <small>
+                                                <small data-i18n="nmea.debug.beforeDescription">
                                                         Alimentação incompatível com o lado CAN
                                                         do ISO1044
                                                 </small>
@@ -779,15 +838,15 @@
                                         </span>
 
                                         <article class="nmea-debug-after">
-                                                <span>
+                                                <span data-i18n="nmea.debug.correction">
                                                         Correção
                                                 </span>
 
-                                                <strong>
+                                                <strong data-i18n="nmea.debug.afterVoltage">
                                                         5 V isolados
                                                 </strong>
 
-                                                <small>
+                                                <small data-i18n="nmea.debug.afterDescription">
                                                         Comunicação CAN estabelecida entre as
                                                         duas placas
                                                 </small>
@@ -799,44 +858,47 @@
                 <section class="section nmea-results-section">
                         <div class="nmea-results">
                                 <div>
-                                        <p class="section-label">
+                                        <p
+                                                class="section-label"
+                                                data-i18n="nmea.results.label"
+                                        >
                                                 Resultado
                                         </p>
 
-                                        <h2>
+                                        <h2 data-i18n="nmea.results.title">
                                                 Uma primeira versão funcional e validada por
                                                 subsistemas
                                         </h2>
                                 </div>
 
                                 <div class="nmea-results-text">
-                                        <p>
+                                        <p data-i18n="nmea.results.paragraphOne">
                                                 O projeto demonstrou o funcionamento da aquisição
                                                 analógica e digital, do processamento local,
                                                 da comunicação MQTT e da camada CAN entre duas
                                                 placas.
                                         </p>
 
-                                        <p>
+                                        <p data-i18n="nmea.results.paragraphTwo">
                                                 A integração completa numa rede NMEA 2000 real,
                                                 com equipamentos comerciais e PGNs finais da
                                                 aplicação, permaneceu como etapa futura.
                                         </p>
 
                                         <div class="nmea-results-tags">
-                                                <span>
+                                                <span data-i18n="nmea.results.pcb">
                                                         PCB desenvolvida
                                                 </span>
 
-                                                <span>
+                                                <span data-i18n="nmea.results.firmware">
                                                         Firmware funcional
                                                 </span>
 
-                                                <span>
+                                                <span data-i18n="nmea.results.mqtt">
                                                         MQTT validado
                                                 </span>
 
-                                                <span>
+                                                <span data-i18n="nmea.results.can">
                                                         CAN validado
                                                 </span>
                                         </div>
@@ -852,5 +914,6 @@
         </footer>
 
         <script src="js/main.js"></script>
+        <script src="js/lang.js"></script>
 </body>
 </html>

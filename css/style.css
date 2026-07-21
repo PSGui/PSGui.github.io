@@ -1607,3 +1607,214 @@ a {
                 transition-duration: 0.01ms !important;
         }
 }
+
+/* ==========================================================
+   Programação e ferramentas
+   ========================================================== */
+
+.skills-section {
+        position: relative;
+
+        overflow: hidden;
+
+        background-color: var(--background);
+}
+
+.skills-icons-layout {
+        width: min(90%, var(--max-width));
+        margin-right: auto;
+        margin-left: auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+}
+
+.skills-icons-panel,
+.electronics-tools-panel {
+        padding: 2.2rem;
+
+        background:
+                linear-gradient(
+                        145deg,
+                        rgba(23, 32, 51, 0.98),
+                        rgba(17, 24, 39, 0.98)
+                );
+
+        border: 1px solid var(--border);
+        border-radius: 16px;
+
+        transition:
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.skills-icons-panel:hover,
+.electronics-tools-panel:hover {
+        border-color: rgba(56, 189, 248, 0.35);
+
+        box-shadow: 0 24px 55px rgba(0, 0, 0, 0.22);
+}
+
+.skills-icons-panel h3,
+.electronics-tools-panel h3 {
+        margin-top: 0.4rem;
+
+        font-size: 1.7rem;
+}
+
+.skills-icons-image {
+        width: min(100%, 430px);
+        height: auto;
+
+        display: block;
+
+        backface-visibility: hidden;
+        transform: translateZ(0);
+}
+
+.skills-icons-wrapper {
+        min-height: 120px;
+        margin-top: 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.skills-icons-image {
+        width: min(100%, 430px);
+        height: auto;
+
+        display: block;
+}
+
+.skills-name-list {
+        margin-top: 1.5rem;
+
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0.4rem;
+}
+
+.skills-name-list-tools {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.skills-name-list span {
+        color: var(--text-secondary);
+
+        font-family: "Courier New", monospace;
+        font-size: 0.72rem;
+        text-align: center;
+}
+
+.electronics-tools-panel {
+        width: min(90%, var(--max-width));
+        margin: 1.5rem auto 0;
+}
+
+.electronics-tools-list {
+        margin-top: 1.5rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+}
+
+.electronics-tools-list span {
+        padding: 0.55rem 0.9rem;
+
+        background-color: var(--accent-soft);
+        color: var(--accent);
+
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        border-radius: 999px;
+
+        font-family: "Courier New", monospace;
+        font-size: 0.8rem;
+}
+
+@media (max-width: 800px) {
+        .skills-icons-layout {
+                grid-template-columns: 1fr;
+        }
+}
+
+@media (max-width: 620px) {
+        .skills-icons-panel,
+        .electronics-tools-panel {
+                padding: 1.5rem;
+        }
+
+        .skills-icons-image {
+                width: min(100%, 340px);
+        }
+
+        .skills-name-list {
+                display: none;
+        }
+}
+
+/* ==========================================================
+   Seletor de idioma
+   ========================================================== */
+
+.language-switcher {
+        padding: 0.35rem 0.55rem;
+
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+
+        color: var(--text-secondary);
+
+        border: 1px solid var(--border);
+        border-radius: 999px;
+
+        font-family: "Courier New", monospace;
+        font-size: 0.75rem;
+}
+
+.language-button {
+        padding: 0;
+
+        background: none;
+        color: var(--text-secondary);
+
+        border: none;
+
+        font: inherit;
+
+        cursor: pointer;
+
+        transition: color 0.2s ease;
+}
+
+.language-button:hover {
+        color: var(--text-primary);
+}
+
+.language-button.active {
+        color: var(--accent);
+
+        font-weight: 700;
+}
+
+@media (max-width: 900px) {
+        .navbar {
+                flex-wrap: wrap;
+        }
+
+        .language-switcher {
+                margin-left: auto;
+        }
+}
+
+@media (max-width: 620px) {
+        .language-switcher {
+                margin-left: 0;
+
+                align-self: flex-start;
+        }
+}

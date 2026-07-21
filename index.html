@@ -15,10 +15,10 @@
 
         <title>Guilherme Braga | Portefólio de Engenharia</title>
 
-        <link rel="stylesheet" href="css/style.css?v=8">
+        <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 
-<body>
+<body data-page="home">
         <header class="header">
                 <nav class="navbar">
                         <a href="#inicio" class="logo">
@@ -27,19 +27,37 @@
 
                         <ul class="nav-links">
                                 <li>
-                                        <a href="#inicio">
+                                        <a
+                                                href="#inicio"
+                                                data-i18n="nav.home"
+                                        >
                                                 Início
                                         </a>
                                 </li>
 
                                 <li>
-                                        <a href="#sobre">
+                                        <a
+                                                href="#sobre"
+                                                data-i18n="nav.about"
+                                        >
                                                 Sobre
                                         </a>
                                 </li>
 
                                 <li>
-                                        <a href="#projetos">
+                                        <a
+                                                href="#competencias"
+                                                data-i18n="nav.skills"
+                                        >
+                                                Competências
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a
+                                                href="#projetos"
+                                                data-i18n="nav.projects"
+                                        >
                                                 Projetos
                                         </a>
                                 </li>
@@ -51,11 +69,44 @@
                                 </li>
 
                                 <li>
-                                        <a href="#contactos">
+                                        <a
+                                                href="#contactos"
+                                                data-i18n="nav.contacts"
+                                        >
                                                 Contactos
                                         </a>
                                 </li>
                         </ul>
+
+                        <div
+                                class="language-switcher"
+                                aria-label="Selecionar idioma"
+                                data-i18n-attr="aria-label:language.selector"
+                        >
+                                <button
+                                        type="button"
+                                        class="language-button active"
+                                        data-language="pt"
+                                        aria-label="Mudar idioma para português"
+                                        data-i18n-attr="aria-label:language.portuguese"
+                                >
+                                        PT
+                                </button>
+
+                                <span aria-hidden="true">
+                                        /
+                                </span>
+
+                                <button
+                                        type="button"
+                                        class="language-button"
+                                        data-language="en"
+                                        aria-label="Mudar idioma para inglês"
+                                        data-i18n-attr="aria-label:language.english"
+                                >
+                                        EN
+                                </button>
+                        </div>
                 </nav>
         </header>
 
@@ -63,28 +114,39 @@
                 <section id="inicio" class="hero">
                         <div class="hero-inner">
                                 <div class="hero-content">
-                                        <p class="hero-label">
+                                        <p
+                                                class="hero-label"
+                                                data-i18n="home.hero.label"
+                                        >
                                                 Engenharia Eletrotécnica e de Computadores
                                         </p>
 
-                                        <h1>
-                                                Projetos académicos e soluções de engenharia
+                                        <h1 data-i18n="home.hero.title">
+                                                Projetos académicos e pessoais de engenharia
                                         </h1>
 
-                                        <p class="hero-description">
+                                        <p
+                                                class="hero-description"
+                                                data-i18n="home.hero.description"
+                                        >
                                                 Portefólio de projetos desenvolvidos nas áreas
                                                 de eletrónica, sistemas embebidos, automação,
                                                 comunicações e software.
                                         </p>
 
                                         <div class="hero-actions">
-                                                <a href="#projetos" class="button">
+                                                <a
+                                                        href="#projetos"
+                                                        class="button"
+                                                        data-i18n="home.hero.viewProjects"
+                                                >
                                                         Ver projetos
                                                 </a>
 
                                                 <a
                                                         href="#sobre"
                                                         class="button button-secondary"
+                                                        data-i18n="home.hero.about"
                                                 >
                                                         Sobre mim
                                                 </a>
@@ -106,13 +168,19 @@
                         </div>
                 </section>
 
-                <section id="sobre" class="section about-section">
+                <section
+                        id="sobre"
+                        class="section about-section"
+                >
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="home.about.label"
+                                >
                                         Perfil
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="home.about.title">
                                         Sobre mim
                                 </h2>
                         </div>
@@ -123,6 +191,7 @@
                                                 <img
                                                         src="assets/images/foto_perfil.jpeg"
                                                         alt="Fotografia de Guilherme Braga"
+                                                        data-i18n-attr="alt:home.about.photoAlt"
                                                 >
                                         </div>
 
@@ -140,28 +209,28 @@
                                         </span>
 
                                         <div class="speech-content">
-                                                <p>
+                                                <p data-i18n="home.about.paragraphOne">
                                                         Sou licenciado em Engenharia Eletrotécnica
-                                                        e de Computadores e tenho particular
-                                                        interesse por automação industrial,
-                                                        eletrónica, desenvolvimento de hardware,
-                                                        sistemas embebidos e software.
+                                                        e de Computadores pelo ISEP
+                                                        (Instituto Superior de Engenharia do Porto)
+                                                        e tenho particular interesse por automação
+                                                        industrial, eletrónica, desenvolvimento de
+                                                        hardware, sistemas embebidos e software.
                                                 </p>
 
-                                                <p>
-                                                        Durante a licenciatura desenvolvi projetos
-                                                        que me permitiram trabalhar com programação,
-                                                        desenho de placas eletrónicas,
-                                                        microcontroladores, comunicações e análise
-                                                        de sistemas.
+                                                <p data-i18n="home.about.paragraphTwo">
+                                                        Durante a licenciatura desenvolvi projetos,
+                                                        tanto pessoais como académicos, que me
+                                                        permitiram trabalhar com programação,
+                                                        desenho de PCBs, microcontroladores,
+                                                        comunicações e análise de sistemas.
                                                 </p>
 
-                                                <p>
-                                                        Neste portefólio apresento não só os
-                                                        resultados, mas também os problemas
-                                                        encontrados, as decisões técnicas tomadas
-                                                        e o processo utilizado para chegar a cada
-                                                        solução.
+                                                <p data-i18n="home.about.paragraphThree">
+                                                        Decidi criar este portefólio em formato Web
+                                                        como forma de partilhar o meu trabalho de
+                                                        uma maneira mais acessível, organizada e
+                                                        interativa.
                                                 </p>
                                         </div>
 
@@ -176,19 +245,108 @@
                 </section>
 
                 <section
+                        id="competencias"
+                        class="section skills-section"
+                >
+                        <div class="section-header">
+                                <p
+                                        class="section-label"
+                                        data-i18n="home.skills.label"
+                                >
+                                        Perfil técnico
+                                </p>
+
+                                <h2 data-i18n="home.skills.title">
+                                        Programação e ferramentas
+                                </h2>
+
+                                <p
+                                        class="section-description"
+                                        data-i18n="home.skills.description"
+                                >
+                                        Tecnologias e ferramentas utilizadas no
+                                        desenvolvimento dos meus projetos académicos
+                                        e pessoais.
+                                </p>
+                        </div>
+
+                        <div class="skills-icons-layout">
+                                <article class="skills-icons-panel">
+                                        <h3 data-i18n="home.skills.programming">
+                                                Programação
+                                        </h3>
+
+                                        <div class="skills-icons-wrapper">
+                                                <img
+                                                        src="https://skillicons.dev/icons?i=c,cpp,html,css,py,sqlite&theme=dark&perline=6"
+                                                        alt="Ícones de C, C++, HTML, CSS, Python e SQLite"
+                                                        class="skills-icons-image"
+                                                        loading="lazy"
+                                                        data-i18n-attr="alt:home.skills.programmingAlt"
+                                                >
+                                        </div>
+                                </article>
+
+                                <article class="skills-icons-panel">
+                                        <h3 data-i18n="home.skills.tools">
+                                                Ferramentas
+                                        </h3>
+
+                                        <div class="skills-icons-wrapper">
+                                                <img
+                                                        src="https://skillicons.dev/icons?i=linux,vim,vscode,git,github&theme=dark&perline=5"
+                                                        alt="Ícones de Linux, Vim, Visual Studio Code, Git e GitHub"
+                                                        class="skills-icons-image"
+                                                        loading="lazy"
+                                                        data-i18n-attr="alt:home.skills.toolsAlt"
+                                                >
+                                        </div>
+                                </article>
+                        </div>
+
+                        <div class="electronics-tools-panel">
+                                <p
+                                        class="project-category"
+                                        data-i18n="home.skills.engineeringCategory"
+                                >
+                                        Eletrónica e sistemas embebidos
+                                </p>
+
+                                <h3 data-i18n="home.skills.engineeringTitle">
+                                        Ferramentas de engenharia
+                                </h3>
+
+                                <div class="electronics-tools-list">
+                                        <span>KiCad</span>
+                                        <span>PLECS</span>
+                                        <span>DAVE IDE</span>
+                                        <span>Micrium</span>
+                                        <span>Microchip Studio</span>
+                                        <span>PlatformIO</span>
+                                </div>
+                        </div>
+                </section>
+
+                <section
                         id="projetos"
                         class="section section-secondary"
                 >
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="home.projects.label"
+                                >
                                         Portefólio
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="home.projects.title">
                                         Projetos em destaque
                                 </h2>
 
-                                <p class="section-description">
+                                <p
+                                        class="section-description"
+                                        data-i18n="home.projects.description"
+                                >
                                         Projetos de hardware, sistemas embebidos,
                                         engenharia e desenvolvimento de software.
                                 </p>
@@ -197,15 +355,18 @@
                         <div class="projects-grid">
                                 <article class="project-card project-card-featured">
                                         <div class="project-content">
-                                                <p class="project-category">
+                                                <p
+                                                        class="project-category"
+                                                        data-i18n="home.projects.nmea.category"
+                                                >
                                                         Hardware e sistemas embebidos
                                                 </p>
 
-                                                <h3>
+                                                <h3 data-i18n="home.projects.nmea.title">
                                                         Módulo de aquisição NMEA 2000
                                                 </h3>
 
-                                                <p>
+                                                <p data-i18n="home.projects.nmea.description">
                                                         Desenvolvimento de uma PCB para aquisição
                                                         de sinais analógicos e digitais em ambiente
                                                         naval, com processamento local, comunicação
@@ -225,7 +386,9 @@
                                                         href="projeto-nmea2000.html"
                                                         class="project-link"
                                                 >
-                                                        Explorar projeto
+                                                        <span data-i18n="home.projects.nmea.action">
+                                                                Explorar projeto
+                                                        </span>
 
                                                         <span aria-hidden="true">
                                                                 →
@@ -236,45 +399,58 @@
 
                                 <article class="project-card">
                                         <div class="project-content">
-                                                <p class="project-category">
-                                                        Engenharia e software
+                                                <p
+                                                        class="project-category"
+                                                        data-i18n="home.projects.monitor.category"
+                                                >
+                                                        Engenharia e sistemas embebidos
                                                 </p>
 
-                                                <h3>
-                                                        Ferramenta de recomendação AVAC
+                                                <h3 data-i18n="home.projects.monitor.title">
+                                                        Monitor Ambiental Industrial
                                                 </h3>
 
-                                                <p>
-                                                        Sistema de apoio à seleção preliminar de
-                                                        soluções AVAC residenciais, baseado na
-                                                        análise de projetos reais e em critérios
-                                                        técnicos, económicos e de conforto.
+                                                <p data-i18n="home.projects.monitor.description">
+                                                        Sistema de monitorização de temperatura,
+                                                        humidade e condensação para utilização em
+                                                        ambientes industriais, com alarme e envio
+                                                        de dados através de MQTT.
                                                 </p>
 
                                                 <div class="project-tags">
-                                                        <span>AVAC</span>
-                                                        <span>Excel</span>
-                                                        <span>Dados</span>
-                                                        <span>Web</span>
+                                                        <span>ESP32</span>
+                                                        <span>PCB</span>
+
+                                                        <span data-i18n="home.projects.monitor.monitoring">
+                                                                Monitorização
+                                                        </span>
+
+                                                        <span>MQTT</span>
                                                 </div>
 
-                                                <span class="project-status">
-                                                        Conteúdo em preparação
+                                                <span
+                                                        class="project-status"
+                                                        data-i18n="home.projects.monitor.status"
+                                                >
+                                                        Projeto em curso
                                                 </span>
                                         </div>
                                 </article>
 
                                 <article class="project-card project-card-featured">
                                         <div class="project-content">
-                                                <p class="project-category">
+                                                <p
+                                                        class="project-category"
+                                                        data-i18n="home.projects.school.category"
+                                                >
                                                         Programação e sistemas
                                                 </p>
 
-                                                <h3>
+                                                <h3 data-i18n="home.projects.school.title">
                                                         Projetos 42
                                                 </h3>
 
-                                                <p>
+                                                <p data-i18n="home.projects.school.description">
                                                         Projetos desenvolvidos no percurso da 42,
                                                         com foco em programação em C, gestão de
                                                         memória, Linux, UNIX e comunicação entre
@@ -292,7 +468,9 @@
                                                         href="projetos-42.html"
                                                         class="project-link"
                                                 >
-                                                        Explorar projetos
+                                                        <span data-i18n="home.projects.school.action">
+                                                                Explorar projetos
+                                                        </span>
 
                                                         <span aria-hidden="true">
                                                                 →
@@ -303,17 +481,26 @@
                         </div>
                 </section>
 
-                <section id="contactos" class="section">
+                <section
+                        id="contactos"
+                        class="section"
+                >
                         <div class="section-header">
-                                <p class="section-label">
+                                <p
+                                        class="section-label"
+                                        data-i18n="home.contacts.label"
+                                >
                                         Contacto
                                 </p>
 
-                                <h2>
+                                <h2 data-i18n="home.contacts.title">
                                         Contactos
                                 </h2>
 
-                                <p class="section-description">
+                                <p
+                                        class="section-description"
+                                        data-i18n="home.contacts.description"
+                                >
                                         Ligações para o meu trabalho e perfil profissional.
                                 </p>
                         </div>
@@ -345,5 +532,6 @@
         </footer>
 
         <script src="js/main.js"></script>
+        <script src="js/lang.js"></script>
 </body>
 </html>

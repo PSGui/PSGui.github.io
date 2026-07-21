@@ -34,7 +34,7 @@
         padding: 5.5rem 0;
 
         display: grid;
-        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+        grid-template-columns: minmax(0, 1.25fr) minmax(380px, 0.75fr);
         align-items: center;
         gap: 5rem;
 }
@@ -935,5 +935,146 @@
 
         .nmea-media-card {
                 min-height: 240px;
+        }
+}
+
+/* ==========================================================
+   Imagem principal da PCB
+   Apenas a imagem, sem caixa ou elementos decorativos
+   ========================================================== */
+
+.nmea-board-showcase {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.nmea-board-showcase::before {
+        display: none;
+}
+
+.nmea-board-frame {
+        width: min(100%, 440px);
+        padding: 0;
+
+        background: none;
+
+        border: none;
+        border-radius: 0;
+
+        box-shadow: none;
+
+        animation:
+                nmea-board-entrance
+                0.8s
+                cubic-bezier(0.22, 1, 0.36, 1)
+                both;
+}
+
+.nmea-board-frame-header,
+.nmea-board-label {
+        display: none;
+}
+
+.nmea-board-image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        overflow: visible;
+
+        background: none;
+
+        border: none;
+        border-radius: 0;
+
+        box-shadow: none;
+}
+
+.nmea-board-image::before,
+.nmea-board-image::after {
+        display: none;
+}
+
+.nmea-board-image img {
+        width: 100%;
+        height: auto;
+
+        display: block;
+
+        object-fit: contain;
+
+        border: none;
+        border-radius: 0;
+
+        box-shadow: none;
+
+        transform: none;
+
+        transition:
+                transform 0.4s
+                cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nmea-board-frame:hover .nmea-board-image {
+        border: none;
+
+        box-shadow: none;
+
+        transform: none;
+}
+
+.nmea-board-frame:hover .nmea-board-image img {
+        transform: scale(1.015);
+}
+
+@keyframes nmea-board-entrance {
+        from {
+                opacity: 0;
+
+                transform: translateY(12px);
+        }
+
+        to {
+                opacity: 1;
+
+                transform: translateY(0);
+        }
+}
+
+@media (max-width: 800px) {
+        .nmea-board-showcase {
+                width: min(100%, 360px);
+
+                justify-self: center;
+        }
+
+        .nmea-board-frame {
+                width: min(100%, 330px);
+        }
+}
+
+@media (max-width: 620px) {
+        .nmea-board-frame {
+                width: min(100%, 280px);
+        }
+
+        .nmea-board-image,
+        .nmea-board-image img {
+                border-radius: 0;
+        }
+}
+
+@media (prefers-reduced-motion: reduce) {
+        .nmea-board-frame {
+                animation: none;
+        }
+
+        .nmea-board-image img {
+                transition: none;
+        }
+
+        .nmea-board-frame:hover .nmea-board-image img {
+                transform: none;
         }
 }
